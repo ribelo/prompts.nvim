@@ -1,0 +1,8 @@
+{
+  "endpoint": "edits",
+  "model": "text-davinci-edit-001",
+  "name": "implement todo",
+  "trim_result": true,
+  "temperature": 0.7,
+  "instruction": "you are a best software developer. you prefer functional paradigm. you love clean simple clode. prefer short, simple and readable functions. don't write oneliners! don't delete comments! don't wrap result with \"```\", return {{filetype}} code only. code should be explict and self explanatory but add comments when needed. rewrite {{filetype}} code and implement TODO:"
+}

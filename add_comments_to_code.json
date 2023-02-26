@@ -1,0 +1,8 @@
+{
+  "endpoint": "completions",
+  "model": "text-davinci-003",
+  "name": "comment code",
+  "trim_result": true,
+  "temperature": 0.7,
+  "prompt": "you are a best software developer. you love clean simple clode. don't wrap result with \"```{{filetype}}\". rewrite code below and add comments.\n\n```{{filetype}}\n{{selection}}\n```"
+}

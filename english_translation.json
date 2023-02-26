@@ -1,0 +1,7 @@
+{
+  "endpoint": "completions",
+  "model": "text-davinci-003",
+  "name": "english translation",
+  "trim_result": true,
+  "prompt": "you are an american native speaker, translate text below into English and improve grammar. use simple and common vocabulery. don't use complicated gramaar and tenses.\n\n\"{{selection}}\""
+}

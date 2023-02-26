@@ -1,0 +1,7 @@
+{
+  "endpoint": "completions",
+  "model": "text-davinci-003",
+  "name": "eli5 code",
+  "trim_result": true,
+  "prompt": "ELI5. Explain the code below as if you were talking to a five-year-old:\n\n{{selection}}"
+}
