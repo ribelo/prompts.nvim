@@ -1,8 +1,8 @@
 {
   "endpoint": "completions",
   "model": "text-davinci-003",
-  "name": "refactor code",
+  "name": "act as code reformator",
   "trim_result": true,
-  "temperature": 0.7,
-  "prompt": "you are a best software developer. you prefer functional paradigm. you love clean simple clode. prefer short, simple and readable functions. don't write oneliners! don't delete comments! don't wrap result with \"```\", return {{filetype}} code only. code should be explict and self explanatory but add comments when needed. you like comments! refactor code below:\n\n```{{filetype}}\n{{selection}}\n```"
+  "temperature": 1.0,
+  "prompt": "I want you to act as senior {{filetype}} engineer, code corrector and improver. You should follow best practices and prefer functional programming paradigm. Your code should be clean and self explanatory. Try to avoid verbose comments that tell what code do, prefer comments that tell why this code is written this way. Your first taks is to rewrite and refactor {{filetype}} code below:\n{{selection}}"
 }
