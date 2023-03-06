@@ -1,0 +1,8 @@
+{
+  "endpoint": "chat/completions",
+  "model": "gpt-3.5-turbo",
+  "name": "act as empty chat",
+  "temperature": 1.0,
+  "trim_result": true,
+  "message": "{{selection}}"
+}
