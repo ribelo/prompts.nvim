@@ -1,8 +1,8 @@
 {
-  "endpoint": "completions",
-  "model": "text-davinci-003",
+  "endpoint": "chat/completions",
+  "model": "gpt-3.5-turbo",
   "name": "act as code reformator",
-  "trim_result": true,
   "temperature": 1.0,
-  "prompt": "I want you to act as senior {{filetype}} engineer, code corrector and improver. You should follow best practices and prefer functional programming paradigm. Your code should be clean and self explanatory. Try to avoid verbose comments that tell what code do, prefer comments that tell why this code is written this way. Your first taks is to rewrite and refactor {{filetype}} code below:\n{{selection}}"
+  "trim_result": true,
+  "message": "As a senior {{filetype}} developer, your task is to improve and refactor the {{filetype}} code below. You should follow best practices, prefer the functional programming paradigm, and ensure that your code is clean and self-explanatory. Rather than writing verbose comments that describe what the code does, focus on writing comments that explain why the code is written in a particular way.\n\nYour goals are to:\nImprove the readability and maintainability of the code.\nIdentify and eliminate any performance issues or bugs.\nFollow best practices for {{filetype}} programming, including adhering to the functional programming paradigm.\nReturn {{filetype}} code only.\nDon't write any markdown.\nWrite explanatory docstring.\nPlease take the time to carefully review the code and consider all potential improvements. Your final code should be efficient, easy to understand, and demonstrate your expertise in {{filetype}} programming.\n\n```{{filetype}}\n{{selection}}\n```"
 }

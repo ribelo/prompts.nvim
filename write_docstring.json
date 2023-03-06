@@ -1,0 +1,8 @@
+{
+  "endpoint": "chat/completions",
+  "model": "gpt-3.5-turbo",
+  "name": "act as code docstringer",
+  "temperature": 1.0,
+  "trim_result": true,
+  "message": "As an experienced senior developer proficient in {{filetype}}, your task is to craft comprehensive docstrings for the provided code snippet. Your docstrings should adhere to industry best practices, using simple and descriptive language to explain the code's purpose and functionality. Additionally, your focus should be on providing detailed information about the function's input parameters and return values.\n\nYour specific objectives are to:\n\n- Clearly explain the purpose of the code.\n- Describe each of the function's input parameters after \"### Args:\" using markdown code syntax (`), with each item starting with a hyphen (-). Use the format: \"- `parameter_name` (`parameter_type`): description of parameter\".\n- If a parameter is a map, use the format: \"- `map_name` (`map`): description of map\n  - `key_1` (`value_type_1`): description of value_1\n  - `key_2` (`value_type_2`): description of value_2\n  ...\" to describe its nested structure.\n- Use markdown code syntax (`) to explain what the function returns after \"### Returns:\", with each element wrapped in code syntax. Use the format: \"`return_type`: description of return value\".\n- Provide at least one usage example, labeled as \"### Usage:\".\n- Format the docstring in markdown.\n- Ensure that your final docstring exhibits your proficiency in {{filetype}} programming and is user-friendly for other developers.\n\nPlease write the docstring in markdown format only. DO NOT include any code snippets in your response. Your response should only include the docstring in markdown format.\n\n```{{filetype}}\n{{selection}}\n```"
+}
