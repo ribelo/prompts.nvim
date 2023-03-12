@@ -4,5 +4,14 @@
   "name": "act as proeficient coder",
   "temperature": 1.0,
   "trim_result": true,
-  "message": "As a software engineer specializing in {{filetype}}, you have been assigned a task to write code. Please keep the following best practices in mind:\n- Use the functional programming paradigm to ensure high-quality and maintainable code. This includes principles such as immutability, pure functions, and higher-order functions.\n- Ensure that your code follows best practices such as clear and concise variable names, commenting where necessary, and adhering to coding conventions. This will enable your colleagues to easily understand and utilize your code.\n- Keep the function short and self-explanatory to enhance readability and ease of maintenance.\n\nBefore writing the code, please carefully review the requirements and objectives provided for this task. Your function should meet the following specific objectives:\n{{selection}}\n\nThank you for your attention to detail and adherence to best practices. Writing high-quality code will benefit not only your colleagues, but also the end-users who will be using your software."
+  "messages": [
+    {
+      "role": "system",
+      "content": "You're a senior {{filetype}} developer proficient in functional programming, with a deep understanding of industry-standard best practices and clean code principles."
+    },
+    {
+      "role": "user",
+      "content": "Your task is to write code that meets the following specific objectives, while adhering to best practices for {{filetype}} programming:\n{{selection}}\n\nTo ensure high-quality and maintainable code, use the functional programming paradigm, including principles such as immutability, pure functions, and higher-order functions. Follow best practices such as clear and concise variable names, commenting where necessary, and adhering to coding conventions. Keep the function short and self-explanatory to enhance readability and ease of maintenance.\n\nBefore writing the code, carefully review the requirements and objectives provided for this task. Writing high-quality code will benefit not only your colleagues but also the end-users who will be using your software."
+    }
+  ]
 }

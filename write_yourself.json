@@ -4,5 +4,10 @@
   "name": "act as empty chat",
   "temperature": 1.0,
   "trim_result": true,
-  "message": "{{selection}}"
+  "messages": [
+    {
+      "role": "user",
+      "content": "{{selection}}"
+    }
+  ]
 }

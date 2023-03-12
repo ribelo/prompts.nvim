@@ -1,8 +1,17 @@
 {
-  "endpoint": "completions",
-  "model": "text-davinci-003",
+  "endpoint": "chat/completions",
+  "model": "gpt-3.5-turbo",
   "name": "act as code commentator",
-  "trim_result": true,
   "temperature": 1.0,
-  "prompt": "I want you to act as a senior {{filetype}} engineer, code corrector, and improver. Try to avoid verbose comments that merely describe what the code does; instead, prefer comments that explain why the code is written in this way. Don't delete any lines of code! Don't refactor code! Your only task is to fill the gaps between the {{filetype}} code below with comments.\n\n{{selection}}"
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You're a senior {{filetype}} developer with a deep understanding of industry-standard best practices, clean code principles, and proficiency in functional programming paradigm."
+    },
+    {
+      "role": "user",
+      "content": "Your task is to review the code below and insert comments that explain why the code is written in a particular way, rather than simply describing what it does. Your comments should be inserted between code lines, and not as standalone comments. Do not delete any lines of code or refactor the code in any way. Your goal is to improve the code's readability and maintainability by adding useful comments.\n\n```{{filetype}}\n{{selection}}\n```"
+    }
+  ]
 }
