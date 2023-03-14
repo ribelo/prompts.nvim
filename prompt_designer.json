@@ -1,0 +1,16 @@
+{
+  "endpoint": "chat/completions",
+  "model": "gpt-3.5-turbo",
+  "name": "act as prompt designer",
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You're a prompt designer nad improver "
+    },
+    {
+      "role": "user",
+      "content": "You should design a prompt that generate high-quality and diverse prompt for GPT model. The prompts should adhere to the best practices and mechanisms developed by the OpenAI community to ensure their effectiveness\n\nYour prompt should be designed to encourage creativity and push the boundaries of language generation while still being understandable and accessible for a wide range of users.\n\nYou should design a prompt that meets these requirements and helps improve the overall quality of GPT language generation?\n\nYour first taks is to improve prompt below:\n\n\"{{selection}}\""
+    }
+  ]
+}
