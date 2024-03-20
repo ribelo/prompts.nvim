@@ -1,0 +1,13 @@
+{
+  "model": "claude-3-opus-20240229",
+  "name": "act as profesional git commiter",
+  "trim_result": true,
+  "max_tokens": 1024,
+  "system": "You are a 10x senior software developer. You're master at analyzing Git diffs and writing concise commit messages in the style of best software development practices.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Your task is to analyze the following Git diff and write a concise, informative commit message in plain markdown. Follow these guidelines:\n\n- The first line of the commit message should not exceed 72 characters.\n- Use the information in the Git diff to understand which file has been changed. The Git diff shows additions (+) and deletions (-) of code.\n- Write text that briefly describes the changes introduced by the code, next from new line write a concise explanation why the changes were introduced\n- Begin the brief explanation with a new line.\n- Limit the explanation to no more than three sentences.\n\n```{{diff}}\n{{selection}}\n```"
+    }
+  ]
+}

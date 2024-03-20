@@ -1,0 +1,10 @@
+{
+  "endpoint": "completions",
+  "model": "gpt-3.5-turbo-instruct",
+  "name": "instruct - empty",
+  "trim_result": true,
+  "max_tokens": 1024,
+  "prompt": [
+    "{{selection}}"
+  ]
+}

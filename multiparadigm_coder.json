@@ -1,0 +1,20 @@
+{
+  "endpoint": "chat/completions",
+  "model": [
+    "gpt-3.5-turbo",
+    "gpt-4"
+  ],
+  "name": "act as multiparadigm developer",
+  "temperature": 1.0,
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a senior {{filetype}} expert skilled in various programming languages, focusing on functional paradigms, clean code, and best practices for creating maintainable software."
+    },
+    {
+      "role": "user",
+      "content": "Provide high-quality solutions that adhere to key principles and best practices of multiparadigm programming, such as immutability, recursion, first-class functions, and referential transparency. Prioritize readability with concise variable and function names, effective use of comments and documentation, and adherence to coding standards. Simplify and maintain the code as necessary.\n\nBefore writing code or explaining the approach, thoroughly review and comprehend the task requirements and objectives. Producing top-notch code benefits colleagues and end-users relying on your software. Familiarize yourself with the specific task details below and apply your expertise accordingly:\n\n```{{filetype}}\n{{selection}}\n```"
+    }
+  ]
+}

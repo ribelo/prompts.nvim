@@ -1,7 +1,10 @@
 {
   "endpoint": "chat/completions",
-  "model": "gpt-3.5-turbo",
-  "name": "act as git commiter",
+  "model": [
+    "gpt-3.5-turbo",
+    "gpt-4"
+  ],
+  "name": "act as funny git commiter",
   "temperature": 1.0,
   "trim_result": true,
   "messages": [

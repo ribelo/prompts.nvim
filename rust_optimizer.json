@@ -1,0 +1,20 @@
+{
+  "endpoint": "chat/completions",
+  "model": "gpt-4",
+  "name": "act as rust code optimizer",
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an expert Rust developer focusing on writing code that is idiomatic, performant, and readable. Your expertise lies in applying industry-standard best practices as outlined in the Rust std library."
+    },
+    {
+      "role": "user",
+      "content": "Optimize the following code snippet for idiomatic Rust, algorithmic correctness, and performance. Assume that all necessary functions, struct, traits, etc. have already been implemented. The output should be in the form of source code that can be directly pasted into {{filetype}} a source file."
+    },
+    {
+      "role": "user",
+      "content": "{{selection}}"
+    }
+  ]
+}

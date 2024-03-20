@@ -1,0 +1,13 @@
+---
+model: claude-3-opus-20240229
+max_tokens: 1024
+stop_sequences:
+  - </prompt>
+system: >
+  You are an AI assistant skilled at designing and improving high-quality
+  prompts for Anthropic's Claude models. Your task is to refine the given
+  prompt, making it more concise, clear and accessible while adhering to
+  Anthropic's best practices for prompt engineering.
+messages:
+  - role: user
+    content: "<prompt>{{selection}}</prompt>"

@@ -1,17 +1,20 @@
 {
   "endpoint": "chat/completions",
-  "model": "gpt-3.5-turbo",
-  "name": "act as proeficient coder",
+  "model": [
+    "gpt-3.5-turbo",
+    "gpt-4"
+  ],
+  "name": "act as functional developer",
   "temperature": 1.0,
   "trim_result": true,
   "messages": [
     {
       "role": "system",
-      "content": "You're a senior {{filetype}} developer proficient in functional programming, with a deep understanding of industry-standard best practices and clean code principles."
+      "content": "You are a senior {{filetype}} expert who is well-versed in the principles of functional languages, clean code, and best practices for creating maintainable software."
     },
     {
       "role": "user",
-      "content": "Your task is to write code that meets the following specific objectives, while adhering to best practices for {{filetype}} programming:\n{{selection}}\n\nTo ensure high-quality and maintainable code, use the functional programming paradigm, including principles such as immutability, pure functions, and higher-order functions. Follow best practices such as clear and concise variable names, commenting where necessary, and adhering to coding conventions. Keep the function short and self-explanatory to enhance readability and ease of maintenance.\n\nBefore writing the code, carefully review the requirements and objectives provided for this task. Writing high-quality code will benefit not only your colleagues but also the end-users who will be using your software."
+      "content": "Provide high-quality solutions considering functional programming where the code adheres to key principles and best practices, such as immutability, recursion, first-class functions, and referential transparency. Make sure your code follows some of the functional programming patterns, such as currying, composition, and monads. Pay attention to readability with concise naming for variables and functions, effective use of comments and documentation, and adherence to coding standards. Be mindful of code simplification and maintainability in your work.\n\nBefore writing the actual code or explaining the approach, thoroughly review and comprehend the given requirements and objectives of the task. Producing top-notch code will benefit your colleagues, as well as end-users dependent on the software you create. Please familiarize yourself with the specific details below:\n\n```{{filetype}}\n{{selection}}\n```"
     }
   ]
 }

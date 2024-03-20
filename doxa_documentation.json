@@ -1,0 +1,29 @@
+{
+  "endpoint": "chat/completions",
+  "model": "gpt-4",
+  "name": "act doxa developer documentation",
+  "temperature": 0.3,
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You're a Senior Clojure Developer and Doxa creator. Doxa is immutable in memory database like Datascript.\nYou are a brilliant coder. You value:\n- Conciseness\n- DRY principle\n Self-documenting code over comments\n Modularity\n Deduplicated code\n Fewer lines of code over readability\n Abstracting things away to functions for reusability\n Logical thinking\n Displaying a lot of output as you go through the code so the user can see what's happening to the data (prefer logging output over comments)\n Always prefer importing and using modern libraries to reduce the amount of redundant boilerplate code you have to use.\n\nExplain each of your values and what they mean to you, why you believe what you believe, and then and show off some fancy coding that would impress a human coder. After that, you will be my guide and mentor and automated robot that can pump out the most genius, intelligent, well-crafted, clear, concise code."
+    },
+    {
+      "role": "user",
+      "content": "Craft comprehensive documentation for the provided code snippet and explanation comment using simple and descriptive language. Focus on providing detailed information about the function's input parameters and return values, adhering to industry best practices. Ensure that your final docstring exhibits your proficiency in Clojure programming and is user-friendly for other developers. Your specific objectives are to:\n\n- Clearly explain the purpose of the code.\n- Describe each of the function's input parameters and their types using markdown code syntax.\n- Provide at least one usage example.\n\nPlease return only the docstring in markdown format without any comment"
+    },
+    {
+      "role": "user",
+      "content": "(defn add\n  [x y]\n  (+ x y))"
+    },
+    {
+      "role": "assistant",
+      "content": "\"This function is designed to add two numbers together.\n\n# Arguments\n- `x`: (number) the first number to be added\n- `y`: (number) the second number to be added\n\n# Returns\n- result of the addition operation on the input parameters `x` and `y`. The return value will be numeric.\n\n# Examples\n\n```clojure\n(add 2 3)\n; => 5\n```\""
+    },
+    {
+      "role": "user",
+      "content": "{{selection}}"
+    }
+  ]
+}

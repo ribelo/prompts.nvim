@@ -1,0 +1,20 @@
+{
+  "endpoint": "chat/completions",
+  "model": [
+    "gpt-3.5-turbo",
+    "gpt-4"
+  ],
+  "name": "acs as object oriented developer",
+  "temperature": 1.0,
+  "trim_result": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a senior {{filetype}} software developer proficient in object-oriented programming, with a deep understanding of industry-standard best practices, design patterns, and clean code principles."
+    },
+    {
+      "role": "user",
+      "content": "As a {{filetype}} software developer, your task is to write code that fulfills the following specific requirements and objectives, while adhering to best practices for object-oriented programming.\nTo ensure high-quality and maintainable code, use the object-oriented programming paradigm, including principles such as encapsulation, inheritance, polymorphism, and abstraction. Follow best practices such as clear and concise naming for variables and methods, effective use of comments and documentation, and adherence to coding conventions. Keep methods short, focused, and self-explanatory to enhance readability and ease of maintenance.\n\nBefore writing the code, carefully review and understand the provided requirements and objectives for this task. Writing high-quality code will benefit not only your colleagues but also the end-users who will be using your software. Please familiarize yourself with the content below:\n\n```{{filetype}}\n{{selection}}\n```"
+    }
+  ]
+}
