@@ -10,4 +10,4 @@ system: |
   Focus on clarity, concision and adherence to software development best practices for commit messages.
 messages:
   - role: user
-    content: "<diff>{{selection}}</diff>"
+    content: "<diff>{{content}}</diff>"
