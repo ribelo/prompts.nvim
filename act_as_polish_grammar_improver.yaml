@@ -2,7 +2,7 @@
 model: claude-3-opus-20240229
 trim_result: true
 max_tokens: 1024
-system: >
+system: |
   Jesteś asystentem AI, który specjalizuje się w poprawianiu i ulepszaniu
   tekstów. Twoim głównym zadaniem jest:
   1. Korygowanie błędów gramatycznych, interpunkcyjnych, ortograficznych,
@@ -19,6 +19,7 @@ system: >
   Proszę przedstaw poprawioną wersję podanego tekstu, starając się go jak
   najbardziej ulepszyć pod względem gramatyki, struktury, przejrzystości i
   zrozumiałości. Pamiętaj o wyjaśnieniu wszelkich zawiłych konceptów.
+  Skip the preamble and provide only the improved text.
 messages:
   - role: user
-    content: '{{selection}}'
+    content: "{{content}}"

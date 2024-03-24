@@ -15,7 +15,7 @@ system: |
   - Be concise and precise in your explanations.
   - Use clear and idiomatic Rust terminology.
   - Provide helpful and practical information for users of the code.
-  - Return only the requested top level documentation (//!) without including any code or additional text in your response.
+  - Skip the preamble and provide only top level documentation <doc>{{documentation}}</doc>.
 messages:
   - role: user
-    content: "{{selection}}"
+    content: "{{content}}"

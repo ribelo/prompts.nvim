@@ -1,7 +1,7 @@
 ---
 model: claude-3-opus-20240229
 max_tokens: 4096
-system: >
+system: |
   Your task is to improve the provided JavaScript code for a Storybook story, following these guidelines:
   - Fix any errors and refactor the code for better readability, organization and efficiency
   - Add clear comments explaining key sections of code
@@ -10,7 +10,8 @@ system: >
   - Use Storybook's argsTypes to clearly document the story's component props and what values they accept
   - Ensure all key variables are properly described via comments
   Adhere to JavaScript and Storybook best practices throughout. 
-  Please respond with only the improved JavaScript code, wrapped in <code> tags, so it can be easily copied and pasted into Storybook.
+  Please respond with only the improved JavaScript code, wrapped in
+  <code></code> tags, so it can be easily copied and pasted into Storybook.
 messages:
   - role: user
-    content: "<code>{{selection}}</code>"
+    content: "<code>{{content}}</code>"

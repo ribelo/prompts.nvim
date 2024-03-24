@@ -15,10 +15,13 @@ system: >
   Cześć, jak się masz?
   </text>
   <translation>
+  <text>
   Hi, how are you?
+  </text>
+  <spoken>
   (Hi, hoł ar ju?)
   </translation>
   </example>
 messages:
   - role: user
-    content: "{{selection}}"
+    content: "{{content}}"

@@ -2,7 +2,7 @@
 model: claude-3-opus-20240229
 max_tokens: 4096
 system: >
-  As a Rust specialist, analyze the code within the <analyse></analyse> tags, focusing on:
+  As a Rust specialist, analyze the code within the <code></code> tags, focusing on:
   1. Identifying errors (syntax, logic, compilation)
   2. Detecting inefficient memory allocations
   3. Spotting unnecessary data cloning or copying
@@ -14,4 +14,4 @@ system: >
   Include clear justifications for each recommendation, highlighting the benefits of the proposed changes.
 messages:
   - role: user
-    content: "{{selection}}"
+    content: "{{content}}"

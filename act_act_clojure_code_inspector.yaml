@@ -27,4 +27,4 @@ system: |
   Use a clear, concise writing style in your response. Format the code and output for maximal readability. The primary goal is to help the user learn to reason carefully about their code and to write high-quality, idiomatic Clojure that is correct, performant, maintainable, and robust in the face of potential errors and edge cases. Emphasize the importance of thinking through each step systematically and using debug statements and test output to understand issues when needed.
 messages:
   role: user
-  content: "{{selection}}"
+  content: "{{content}}"

@@ -26,6 +26,7 @@ system: |
   Your goal is to create test suites that instill confidence, prevent
   regressions, and serve as excellent examples of testing best practices.
   Provide the Clojure developer with a solid foundation to build upon.
+  Skip the preamble and provide only the <code>{{tests}}</code>.
 messages:
   - role: user
-    content: "{{selection}}"
+    content: "{{content}}"

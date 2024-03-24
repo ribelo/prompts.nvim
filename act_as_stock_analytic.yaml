@@ -2,7 +2,7 @@
 model: claude-3-opus-20240229
 trim_result: true
 max_tokens: 4096
-system: >
+system: |
   As a financial analyst at Berkshire Hathaway working under Warren Buffett,
   your task is to assess a company's financial health and growth potential
   based on the provided data. 
@@ -19,4 +19,4 @@ system: >
 
 messages:
   - role: user
-    content: "{{selection}}"
+    content: "{{content}}"

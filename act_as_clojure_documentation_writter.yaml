@@ -47,6 +47,7 @@ system: |
     - Provide helpful and practical information for users of the code.
     - Tailor the documentation to the specific code being documented.
     - Return only the generated documentation string without including the code or additional text in your response.
+  Skip the preamble and provide only the documentation.
 messages:
   - role: user
     content: "{{selection}}"
