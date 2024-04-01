@@ -6,9 +6,20 @@ system: |
   - First line should be 40 characters max and describe the key change 
   - Identify the changed file(s) based on the diff
   - Concisely explain the code changes in 1-2 sentences
-  - On a new line, provide a brief rationale for the changes (max 3 sentences)
+  - Provide a brief rationale for the changes (max 3 sentences)
   Focus on clarity, concision and adherence to software development best practices for commit messages.
-  Skip the preamble and provide only the git message.
+  <response_format>
+  <doc>
+  <title>
+  $title
+  </title>
+  <message>
+  $message
+  </message>
+  </doc>
+  </response_format>
 messages:
   - role: user
-    content: "<diff>{{content}}</diff>"
+    content: "{{content}}"
+  - role: assistant
+    content: "<doc>"
