@@ -1,5 +1,5 @@
 ---
-model: claude-3-opus-20240229
+vendor: [anthropic, openai, groq]
 max_tokens: 4096
 temperature: 0.0
 system: |
@@ -41,14 +41,11 @@ system: |
    - Use clear and idiomatic Rust terminology.
    - Provide helpful and practical information for users of the code.
    <response_format>
-   <docs>
-   <doc name=$documented_code_name>
-   $documentation
-   </doc>
-   <code>
-   {{leave empty}}
-   </code>
-   </docs>
+      <docs>
+         <doc name={$documented_code_name}>
+            {$documentation}
+         </doc>
+      </docs>
    </response_format>
 messages:
    - role: user

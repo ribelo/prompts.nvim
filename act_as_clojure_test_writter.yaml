@@ -1,5 +1,5 @@
 ---
-model: claude-3-opus-20240229
+vendor: [anthropic, openai, groq]
 max_tokens: 4096
 temperature: 0.0
 system: |

@@ -1,5 +1,5 @@
 ---
-model: claude-3-opus-20240229
+vendor: [anthropic, openai, groq]
 trim_result: true
 max_tokens: 1024
 system: |

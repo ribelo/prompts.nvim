@@ -1,5 +1,5 @@
 ---
-model: claude-3-opus-20240229
+vendor: [anthropic, openai, groq]
 max_tokens: 4096
 temperature: 0.0
 system: |
@@ -55,11 +55,13 @@ system: |
   Skip the preamble and provide only the documentation.
   <response_format>
   <docs>
-    <code>
-    {{code}}
-    </code>
+    <function>
+      {$documentation}
+    </function>
   </docs>
   </response_format>
 messages:
   - role: user
     content: "{{content}}"
+  - role: assistant
+    content: "<docs>"

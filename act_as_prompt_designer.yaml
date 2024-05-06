@@ -1,6 +1,7 @@
 ---
-model: claude-3-opus-20240229
-max_tokens: 1024
+vendor: [anthropic, openai, groq]
+max_tokens: 4096
+temperature: 0.0
 system: |
   Today you will be writing instructions to an eager, helpful, but
   inexperienced and unworldly AI assistant who needs careful instruction to

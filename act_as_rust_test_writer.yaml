@@ -1,5 +1,5 @@
 ---
-model: claude-3-opus-20240229
+vendor: [anthropic, openai, groq]
 max_tokens: 4096
 temperature: 0.0
 system: |
@@ -32,11 +32,11 @@ system: |
   Deliver professional quality test code to give the Rust developer a solid
   foundation to build upon.
   <response_format>
-  <tests>
-  <test>
-  $test_code
-  </test>
-  </tests>
+    <tests>
+      <test>
+        {$test_code}
+      </test>
+    </tests>
   </response_format>
 messages:
   - role: user
