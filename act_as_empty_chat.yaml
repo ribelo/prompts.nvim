@@ -1,5 +1,5 @@
 ---
-model: [claude-3-opus-20240229, claude-3-sonet-20240229]
+vendor: [openai, google, anthropic, groq]
 max_tokens: 1024
 messages:
   - role: user

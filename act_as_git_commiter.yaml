@@ -1,25 +1,44 @@
 ---
-vendor: [anthropic, openai, groq]
+vendor: [openai, google, anthropic, groq]
+remove_tags: [doc]
 max_tokens: 1024
 system: |
-  You are an expert software developer skilled at analyzing Git diffs and
-  writing effective commit messages. For the given Git diff, generate a
-  markdown-formatted commit message following these guidelines:
-  - Title should be 40 characters max and describe the key change 
-  - In message provide a brief rationale for the changes (max 3 sentences)
-  Focus on clarity, concision and adherence to software development best practices for commit messages.
-  <response_format>
-    <doc>
-      <title>
-        {$title}
-      </title>
-      <message>
-        {$message}
-      </message>
-    </doc>
-  </response_format>
+  You are a skilled software developer experienced in analyzing Git diffs and
+  writing effective commit messages. I will provide a Git diff within
+  <git_diff></git_diff> tags. Your task is to generate a well-formatted commit
+  message that follows software development best practices.
 messages:
   - role: user
-    content: "{{content}}"
+    content: |
+      Here is the Git diff to analyze:
+      <git_diff>
+      {{content}}
+      </git_diff>
+      Please follow these step-by-step instructions to generate the commit message:
+      1. Carefully review the Git diff, paying attention to which files were changed and what specific code changes were made in each file.
+      2. Identify the key change or theme that ties together all the individual code changes. This will be the focus of your commit message title and message.
+      3. Write a concise title for the commit message that captures the essence of the change. The title should be no more than 40 characters. Some examples of good titles are:
+      - "Fix bug in login form validation"
+      - "Add support for bulk file upload" 
+      - "Refactor user profile page styling"
+      4. Write a short message (no more than 3 sentences) that provides additional context and rationale for the changes, such as why they were made, what issues they address, or what improvements they bring. The message should provide helpful information to other developers without going into unnecessary detail. Some examples of good messages are:
+      - "Fixes #123 by adding server-side validation of email format. Improves security and data integrity."
+      - "Users can now select multiple files and upload them all at once. Resolves long-standing feature request."
+      - "Cleans up redundant CSS classes and improves responsive layout. Styling is more consistent and maintainable."
+      5. Review your title and message to make sure they are clear, concise, and focused. Check that they adhere to the 40 character limit for the title and 3 sentence max for the message.
+      6. Format the final commit message in the following format:
+      <doc>
+        <title>
+          {title}
+        </title>
+        <message>
+          {message}
+        </message>
+      </doc>
+      Some key things to keep in mind as you write the commit message:
+      - Focus on why the change was made, not just what changed.
+      - Assume the reader has a basic understanding of the codebase, so there's no need to explain everything. 
+      - Use clear, direct language and terminology consistent with the project.
+      - Commit messages are a communication tool, so make sure yours is helpful to your fellow developers!
   - role: assistant
     content: "<doc>"

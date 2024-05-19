@@ -1,5 +1,5 @@
 ---
-vendor: [anthropic, openai, groq]
+vendor: [google, openai, anthropic, groq]
 trim_result: true
 max_tokens: 1024
 temperature: 0.0
